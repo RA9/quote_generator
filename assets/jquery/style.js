@@ -81,7 +81,7 @@ var color = Math.floor(Math.random() * colors.length);
     },
     1000
   );
-  $(".button").animate(
+  $("#new-quote").animate(
     {
       backgroundColor: colors[color]
     },
