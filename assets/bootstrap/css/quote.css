@@ -25,7 +25,12 @@ body {
     height: 100vh;
 }
 
-
+h1 {
+    color: DarkCyan;
+    font-family: "Iimes New Roman",cursive;
+    font-size: 24px;
+  }
+  
 .footer {
     width: 450px;
     text-align: center;
