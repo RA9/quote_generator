@@ -49,31 +49,19 @@ function openURL(url){
 }
 
 
-//The forismatic Api
-$(document).ready(function(){
- getQuote();
- var quotes;
- var author;
- function getQuote(){
-    
+
+  function getQuote(){ 
+
   var url = "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
   $.getJSON(url,function(data){
     $("#text").html(" "+data.quoteText);
     $("#author").html(data.quoteAuthor);
   });
+  if(inIframe()){
+    $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + data.quoteText + '" ' + data.quoteAuthor));
   }
-  
-  $('#new-quote').on("click",function(){
-  getQuote();
-  });
-  
-   $("#tweet-quote").click(function() {
-    window.open("https://twitter.com/intent/tweet?text=" + $("#text").html() + " " + $("#author").html());  
-  });
-  
-});
 
-var color = Math.floor(Math.random() * colors.length);
+  var color = Math.floor(Math.random() * colors.length);
   $("html body").animate(
     {
       backgroundColor: colors[color],
@@ -81,17 +69,24 @@ var color = Math.floor(Math.random() * colors.length);
     },
     1000
   );
-  $("#new-quote").animate(
+
+  $(".bn").animate(
     {
       backgroundColor: colors[color]
     },
     1000
   );
+}
+  $('#new-quote').on("click",function(){
+  getQuote();
+  });
+  
+   $("#tweet-quote").click(function() {
+    window.open("https://twitter.com/intent/tweet?text=" + $("#text").html() + " " + $("#author").html());  
+  });
 
- 
- function getRandomColor() {
-  var letters = '0123456789ABCDEF'; 
-  var color = '#';
-   for (var i = 0; i < 6; i++) { 
-   color += letters[Math.floor(Math.random() * 16)]; } return color; 
-   } 
+//The forismatic Api
+$(document).ready(function(){
+ getQuote();
+});
+

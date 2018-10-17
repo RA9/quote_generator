@@ -53,11 +53,10 @@ body {
 
 #quote-box .quote-text {
     text-align: center;
-    width: 450px;
     height: auto;
     clear: both;
     font-weight: 500;
-    font-size: 1.75em;
+    font-size: 1.2em;
 }
 
 #quote-box .quote-text i {
@@ -113,3 +112,13 @@ body {
     float: right;
 }
 
+/*Date*/
+.time {
+    color: White;
+    font-size: 24px;
+    margin-bottom:20px;
+  }
+  #date {
+    padding: 15px;
+  }
+  
