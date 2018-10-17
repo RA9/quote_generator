@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+ background-color: black; 
+ margin: 0px;
+ padding: 0px;
+}
+
+h1 {
+  color: DarkCyan;
+  font-family: "Iimes New Roman",cursive;
+  font-size: 24px;
+}
+
+.jumbotron {
+  background: DarkGray;
+}
+
+.button {
+  display: block;
+  margin-left: 10px;
+  padding: 10px auto;
+}
+
+
+#quote-box {
+
+  border-radius: 3px;
+
+  position: relative;
+
+  width: 450px;
+
+  padding: 40px 50px;
+
+  display: table;
+
+  background-color: #fff;
+
+}
+
+
+#quote-box .quote-author {
+
+  width: 450px;
+
+  height: auto;
+
+  clear: both;
+
+  padding-top: 20px;
+
+  font-size: 1em;
+
+  text-align: right;
+
+}
+
+#text {
+  color: #333;
+  font-family: "Helvetica";
+  font-size: 24px;
+}
+
+#author {
+  color: DarkCyan;
+  font-family: "Times New Roman";
+  font-size: 15px;
+}
+
+.quote-text i {
+
+  font-size: 1em;
+
+  margin-right: 0.4em;
+
+}
+
+p {
+  color:White;
+  font-family:cursive;
+  font-size: 30px;
+  font-style: italic;
+  word-wrap: word-break;
+}
+
+/*Date*/
+.time {
+  color: White;
+  font-size: 24px;
+  margin-bottom:20px;
+}
+#date {
+  padding: 15px;
+}
+
+a {
+  margin-left: 10px;
+}
+
+a:hover,
+a:focus {
+  background: Black;
+  color: White;
+}
+
+.quotes {
+  background: gray;
+  margin-right:auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: auto;
+  border: 5px solid White;
+}
+
+footer p {
+  padding-top: 20px;
+  font-size: 20px;
+}
